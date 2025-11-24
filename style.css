@@ -8,6 +8,10 @@
 }
 /*Generic CSS */
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     max-width: 100vw;
     overflow-x: hidden;
@@ -24,6 +28,10 @@ li{
  a{
     text-decoration: none;
  }
+ a:hover{
+     text-decoration: underline;
+ }
+
 img{
     width: 100%;
     height: 100%;
@@ -83,6 +91,63 @@ ul{
     text-decoration: none;
 }
 
+.btn_menu{
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color:  #7342d6;
+}
+
+.menu_backdrop{
+    position: absolute;
+    background-color: #202020;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*width: 100vw;
+    height: 100vh;*/
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.menu--open .menu_backdrop{
+    display: flex;
+}
+
+
+.menu_links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.menu_list{
+    padding: 32px 0;
+}
+
+.menu_link{
+    font-size: 40px;
+    color:#ffffff ;
+}
+
+.btn_menu--close{
+    position: absolute;
+    right: 20px;
+    top:10px;
+    padding: 8px;
+    color: white
+    
+}
+
+
+/*LANDING  Page*/
+
 #landing{
     background-color: rgba(115, 66, 214, 0.1);
 }
@@ -138,6 +203,8 @@ button:active{
     display: flex;
 }
 
+
+
 .header_img--wrapper{
     padding:20px ;
     z-index: 2;
@@ -153,6 +220,16 @@ button:active{
     margin: 0 auto;
 
 }
+.row_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.no-cursor{
+    cursor: not-allowed;
+}
+
 /*
 
 HIGHLIGHTS
@@ -285,15 +362,47 @@ FEATURES
 }
 
 /*
-Latest Books
+Explore  Books
 */
 #explore{
     background-color: rgba(115, 66, 214, 0.1);
 }
 
-.row_column{
+
+/*
+FOOTER
+*/
+footer{
+    background-color: #242424;
+}
+.footer_logo{
     display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
+.footer_logo--img{
+    width: 160px;
+    filter: grayscale(1) invert(1)   
+}
+
+.footer_list{
+    margin: 20px 0 24px 0;
+}
+
+.footer_link, .footer_copyright {
+    color:#ffffff;
+    
+}
+
+.footer_link{
+    padding: 0 8px;
+
+}
+
+
+/*Media Queries*/
+@media (max-width: 550px){
+    .nav_links{
+        display: none;
+    }
+    
+}
